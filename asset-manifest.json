@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/room-booking-system/static/css/main.d56b3c4f.css",
+    "main.js": "/room-booking-system/static/js/main.88cb3950.js",
+    "static/media/room209.jpg": "/room-booking-system/static/media/room209.14013529cfd1a5dbde8b.jpg",
+    "static/media/home.jpg": "/room-booking-system/static/media/home.ae54b508bf5c67bb7020.jpg",
+    "static/media/room208.jpg": "/room-booking-system/static/media/room208.22f953711305cbad8310.jpg",
+    "static/media/room206.jpg": "/room-booking-system/static/media/room206.cade9bdd82e1f8ae63ec.jpg",
+    "static/media/room106.jpg": "/room-booking-system/static/media/room106.79b427443a355f11986d.jpg",
+    "static/media/room201.jpg": "/room-booking-system/static/media/room201.2eb40bc82a17a72d8b12.jpg",
+    "static/media/room202.jpg": "/room-booking-system/static/media/room202.2eb40bc82a17a72d8b12.jpg",
+    "static/media/room109.jpg": "/room-booking-system/static/media/room109.304b0160eaaac92e1843.jpg",
+    "static/media/room210.jpg": "/room-booking-system/static/media/room210.19f1203529894c0e709c.jpg",
+    "static/media/room203.jpg": "/room-booking-system/static/media/room203.78bcce2bd8ac53a103e5.jpg",
+    "static/media/room204.jpg": "/room-booking-system/static/media/room204.78bcce2bd8ac53a103e5.jpg",
+    "static/media/admin.jpg": "/room-booking-system/static/media/admin.f907c66549f96ef7e2a7.jpg",
+    "static/media/room110.jpg": "/room-booking-system/static/media/room110.e449c797855b4283db29.jpg",
+    "static/media/room205.jpg": "/room-booking-system/static/media/room205.a15fda600fc3c2ce0b5f.jpg",
+    "static/media/room207.jpg": "/room-booking-system/static/media/room207.e1338c331f19d88e83fe.jpg",
+    "static/media/room101.jpg": "/room-booking-system/static/media/room101.1b48ed44899b765d094c.jpg",
+    "static/media/room102.jpg": "/room-booking-system/static/media/room102.1b48ed44899b765d094c.jpg",
+    "static/media/room107.jpg": "/room-booking-system/static/media/room107.cdb342473fd055a5e516.jpg",
+    "static/media/room105.jpg": "/room-booking-system/static/media/room105.da623bbb685d102a47b8.jpg",
+    "static/media/student.jpg": "/room-booking-system/static/media/student.c4df7c99258c06197bec.jpg",
+    "static/media/room108.jpg": "/room-booking-system/static/media/room108.852fa43c14c7842a75f5.jpg",
+    "static/media/room103.jpg": "/room-booking-system/static/media/room103.ba38dbfa337292e0f75d.jpg",
+    "static/media/room104.jpg": "/room-booking-system/static/media/room104.ba38dbfa337292e0f75d.jpg",
+    "index.html": "/room-booking-system/index.html",
+    "main.d56b3c4f.css.map": "/room-booking-system/static/css/main.d56b3c4f.css.map",
+    "main.88cb3950.js.map": "/room-booking-system/static/js/main.88cb3950.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d56b3c4f.css",
+    "static/js/main.88cb3950.js"
+  ]
+}
