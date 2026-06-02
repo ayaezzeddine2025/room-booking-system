@@ -1,0 +1,125 @@
+.room-availability-page {
+  min-height: 100vh;
+  background-color: #f4f7fb;
+  padding: 100px 25px 40px;
+  box-sizing: border-box;
+}
+
+.room-availability-header {
+  background-color: #ffffff;
+  padding: 35px 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  margin-bottom: 30px;
+}
+
+.room-availability-header h1 {
+  margin: 0 0 12px;
+  font-size: 36px;
+  color: #0f172a;
+}
+
+.room-availability-header p {
+  margin: 0;
+  font-size: 17px;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.room-availability-table-box {
+  background-color: #ffffff;
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+.room-availability-table-box h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 26px;
+  color: #1e3a8a;
+}
+
+.room-availability-table-wrapper {
+  overflow-x: auto;
+}
+
+.room-availability-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 1200px;
+}
+
+.room-availability-table thead {
+  background-color: #1e3a8a;
+  color: #ffffff;
+}
+
+.room-availability-table th,
+.room-availability-table td {
+  padding: 16px 14px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+  vertical-align: middle;
+}
+
+.room-availability-table tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+.availability-room-image {
+  width: 90px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  display: block;
+}
+
+.availability-status {
+  display: inline-block;
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.availability-status.available {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.availability-status.booked {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.empty-availability-row {
+  text-align: center;
+  padding: 24px;
+  color: #64748b;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .room-availability-page {
+    padding: 90px 15px 30px;
+  }
+
+  .room-availability-header,
+  .room-availability-table-box {
+    padding: 25px 20px;
+  }
+
+  .room-availability-header h1 {
+    font-size: 28px;
+  }
+
+  .room-availability-header p {
+    font-size: 15px;
+  }
+
+  .room-availability-table-box h2 {
+    font-size: 22px;
+  }
+}
