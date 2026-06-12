@@ -1,0 +1,132 @@
+.write-feedback-page {
+  min-height: 100vh;
+  background-color: #f4f7fb;
+  padding: 100px 25px 40px;
+  box-sizing: border-box;
+}
+
+.write-feedback-header {
+  background-color: #ffffff;
+  padding: 35px 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  margin-bottom: 30px;
+}
+
+.write-feedback-header h1 {
+  margin: 0 0 12px;
+  font-size: 36px;
+  color: #0f172a;
+}
+
+.write-feedback-header p {
+  margin: 0;
+  font-size: 17px;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.write-feedback-box {
+  background-color: #ffffff;
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+.write-feedback-box h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 26px;
+  color: #1e3a8a;
+}
+
+.write-feedback-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form-group {
+  flex: 1 1 calc(50% - 20px);
+  display: flex;
+  flex-direction: column;
+}
+
+.full-width {
+  flex: 1 1 100%;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.form-group select,
+.form-group textarea {
+  padding: 14px 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s ease;
+  background-color: #ffffff;
+}
+
+.form-group textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.feedback-submit-btn {
+  margin-top: 10px;
+  padding: 14px 24px;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.feedback-submit-btn:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.no-feedback-text {
+  margin-top: 20px;
+  color: #64748b;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .write-feedback-page {
+    padding: 90px 15px 30px;
+  }
+
+  .write-feedback-header,
+  .write-feedback-box {
+    padding: 25px 20px;
+  }
+
+  .write-feedback-header h1 {
+    font-size: 28px;
+  }
+
+  .write-feedback-header p {
+    font-size: 15px;
+  }
+
+  .form-group {
+    flex: 1 1 100%;
+  }
+}

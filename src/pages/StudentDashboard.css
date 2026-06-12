@@ -1,0 +1,194 @@
+.student-dashboard {
+  min-height: 100vh;
+  background-color: #f4f7fb;
+  padding: 100px 25px 40px;
+  box-sizing: border-box;
+}
+
+.student-welcome-card {
+  background: linear-gradient(135deg, #ffffff, #eff6ff);
+  padding: 35px 32px;
+  border-radius: 22px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.student-welcome-text {
+  flex: 1;
+}
+
+.welcome-label {
+  display: inline-block;
+  background-color: #dbeafe;
+  color: #1e3a8a;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.student-welcome-text h1 {
+  margin: 0 0 12px;
+  font-size: 38px;
+  color: #0f172a;
+}
+
+.student-welcome-text p {
+  margin: 0;
+  font-size: 17px;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.student-profile-circle {
+  width: 78px;
+  height: 78px;
+  min-width: 78px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 32px;
+  font-weight: 700;
+  box-shadow: 0 8px 22px rgba(37, 99, 235, 0.35);
+  transition: 0.3s ease;
+  overflow: hidden;
+}
+
+.student-profile-circle:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.45);
+}
+
+.student-profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+.dashboard-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+.dashboard-card {
+  flex: 1 1 280px;
+  background-color: #ffffff;
+  padding: 28px 24px;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
+}
+
+.dashboard-card h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 24px;
+  color: #1e3a8a;
+}
+
+.dashboard-card p {
+  margin-bottom: 20px;
+  color: #64748b;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.dashboard-btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #2563eb;
+  color: #ffffff;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dashboard-btn:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.dashboard-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.summary-box {
+  flex: 1 1 220px;
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: #ffffff;
+  padding: 28px 20px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.1);
+}
+
+.summary-box h3 {
+  margin: 0 0 10px;
+  font-size: 38px;
+}
+
+.summary-box p {
+  margin: 0;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .student-dashboard {
+    padding: 90px 15px 30px;
+  }
+
+  .student-welcome-card {
+    padding: 25px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .student-welcome-text h1 {
+    font-size: 28px;
+  }
+
+  .student-welcome-text p {
+    font-size: 15px;
+  }
+
+  .student-profile-circle {
+    width: 66px;
+    height: 66px;
+    min-width: 66px;
+    font-size: 28px;
+  }
+
+  .dashboard-card {
+    padding: 24px 20px;
+  }
+
+  .dashboard-card h2 {
+    font-size: 21px;
+  }
+
+  .summary-box h3 {
+    font-size: 32px;
+  }
+}
