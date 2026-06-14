@@ -9,45 +9,47 @@ function AdminCalendar() {
   const [selectedBooking, setSelectedBooking] = useState(null);
 
   useEffect(() => {
+    const addOneDay = (dateString) => {
+      const date = new Date(dateString);
+      date.setDate(date.getDate() + 1);
+      return date.toISOString().split("T")[0];
+    };
+
+    const fetchCalendarBookings = async () => {
+      try {
+        const response = await axios.get(
+          "https://room-booking-backend-production-7a12.up.railway.app/bookings/calendar"
+        );
+
+        if (response.data.success) {
+          const calendarEvents = response.data.data.map((booking) => ({
+            id: booking.booking_id,
+            title: `Room ${booking.room_number} - ${booking.floor_name}`,
+            start: booking.start_date,
+            end: addOneDay(booking.end_date),
+            allDay: true,
+            extendedProps: {
+              studentName: booking.full_name,
+              username: booking.username,
+              roomNumber: booking.room_number,
+              roomType: booking.room_type,
+              floorName: booking.floor_name,
+              floorNumber: booking.floor_number,
+              startDate: booking.start_date,
+              endDate: booking.end_date,
+              status: booking.status,
+            },
+          }));
+
+          setEvents(calendarEvents);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
     fetchCalendarBookings();
   }, []);
-
-  const addOneDay = (dateString) => {
-    const date = new Date(dateString);
-    date.setDate(date.getDate() + 1);
-    return date.toISOString().split("T")[0];
-  };
-
-  const fetchCalendarBookings = async () => {
-    try {
-      const response = await axios.get("https://room-booking-backend-production-7a12.up.railway.app/bookings/calendar");
-
-      if (response.data.success) {
-        const calendarEvents = response.data.data.map((booking) => ({
-          id: booking.booking_id,
-          title: `Room ${booking.room_number} - ${booking.floor_name}`,
-          start: booking.start_date,
-          end: addOneDay(booking.end_date),
-          allDay: true,
-          extendedProps: {
-            studentName: booking.full_name,
-            username: booking.username,
-            roomNumber: booking.room_number,
-            roomType: booking.room_type,
-            floorName: booking.floor_name,
-            floorNumber: booking.floor_number,
-            startDate: booking.start_date,
-            endDate: booking.end_date,
-            status: booking.status,
-          },
-        }));
-
-        setEvents(calendarEvents);
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
 
   const handleEventClick = (info) => {
     setSelectedBooking(info.event.extendedProps);

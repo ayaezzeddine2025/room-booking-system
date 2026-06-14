@@ -6,8 +6,6 @@ import axios from "axios";
 function StudentDashboard() {
   const [studentData, setStudentData] = useState(null);
   const [totalBookings, setTotalBookings] = useState(0);
-  const [pendingBookings, setPendingBookings] = useState(0);
-  const [approvedBookings, setApprovedBookings] = useState(0);
 
   useEffect(() => {
     const savedStudent = localStorage.getItem("studentData");
@@ -21,18 +19,13 @@ function StudentDashboard() {
   useEffect(() => {
     if (studentData?.student_id) {
       axios
-        .get(`https://room-booking-backend-production-7a12.up.railway.app/bookings/student/${studentData.student_id}`)
+        .get(
+          `https://room-booking-backend-production-7a12.up.railway.app/bookings/student/${studentData.student_id}`
+        )
         .then((response) => {
           if (response.data.success) {
             const bookings = response.data.data;
-
             setTotalBookings(bookings.length);
-            setPendingBookings(
-              bookings.filter((booking) => booking.status === "pending").length
-            );
-            setApprovedBookings(
-              bookings.filter((booking) => booking.status === "approved").length
-            );
           }
         })
         .catch((error) => {
