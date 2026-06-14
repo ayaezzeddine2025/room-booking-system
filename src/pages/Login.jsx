@@ -6,6 +6,8 @@ import axios from "axios";
 function Login() {
   const navigate = useNavigate();
   const [role, setRole] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
+
   const [formData, setFormData] = useState({
     username: "",
     password: "",
@@ -32,15 +34,21 @@ function Login() {
       let response;
 
       if (role === "admin") {
-        response = await axios.post("https://room-booking-backend-production-7a12.up.railway.app/admins/login", {
-          username: formData.username,
-          password: formData.password,
-        });
+        response = await axios.post(
+          "https://room-booking-backend-production-7a12.up.railway.app/admins/login",
+          {
+            username: formData.username,
+            password: formData.password,
+          }
+        );
       } else if (role === "student") {
-        response = await axios.post("https://room-booking-backend-production-7a12.up.railway.app/students/login", {
-          username: formData.username,
-          password: formData.password,
-        });
+        response = await axios.post(
+          "https://room-booking-backend-production-7a12.up.railway.app/students/login",
+          {
+            username: formData.username,
+            password: formData.password,
+          }
+        );
       } else {
         alert("Please select a role first");
         return;
@@ -95,13 +103,24 @@ function Login() {
 
             <div className="form-group">
               <label>Password</label>
-              <input
-                type="password"
-                name="password"
-                placeholder="Enter your password"
-                value={formData.password}
-                onChange={handleChange}
-              />
+
+              <div className="password-field">
+                <input
+                  type={showPassword ? "text" : "password"}
+                  name="password"
+                  placeholder="Enter your password"
+                  value={formData.password}
+                  onChange={handleChange}
+                />
+
+                <button
+                  type="button"
+                  className="password-eye"
+                  onClick={() => setShowPassword(!showPassword)}
+                >
+                  {showPassword ? "🙈" : "👁️"}
+                </button>
+              </div>
             </div>
 
             <button type="submit" className="login-btn">
@@ -111,7 +130,8 @@ function Login() {
 
           {role === "student" && (
             <p className="login-footer">
-              Don’t have an account? <Link to="/register">Create a new account</Link>
+              Don’t have an account?{" "}
+              <Link to="/register">Create a new account</Link>
             </p>
           )}
         </div>
