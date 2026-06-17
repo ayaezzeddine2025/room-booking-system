@@ -105,13 +105,7 @@ function AdminCalendar() {
             <p>
               <strong>End Date:</strong> {selectedBooking.endDate}
             </p>
-
-            <p>
-              <strong>Status:</strong>{" "}
-              <span className="calendar-status approved">
-                {selectedBooking.status}
-              </span>
-            </p>
+            
           </div>
         )}
       </div>

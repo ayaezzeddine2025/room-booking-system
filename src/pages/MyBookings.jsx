@@ -194,17 +194,20 @@ function MyBookings() {
     const endDate = calculateEndDate();
 
     try {
-      const response = await axios.post("https://room-booking-backend-production-7a12.up.railway.app/bookings", {
-        student_id: studentData.student_id,
-        room_id: selectedRoom.room_id,
-        start_date: startDate,
-        end_date: endDate,
-        booking_duration: bookingDuration,
-        people_count: peopleCount,
-        payment_method: paymentMethod,
-        payment_number: paymentMethod === "cash" ? null : paymentNumber,
-        notes: null,
-      });
+      const response = await axios.post(
+        "https://room-booking-backend-production-7a12.up.railway.app/bookings",
+        {
+          student_id: studentData.student_id,
+          room_id: selectedRoom.room_id,
+          start_date: startDate,
+          end_date: endDate,
+          booking_duration: bookingDuration,
+          people_count: peopleCount,
+          payment_method: paymentMethod,
+          payment_number: paymentMethod === "cash" ? null : paymentNumber,
+          notes: null,
+        }
+      );
 
       if (response.data.success) {
         alert(response.data.message);
@@ -260,7 +263,8 @@ function MyBookings() {
           </p>
 
           <p>
-            <strong>Day Price:</strong> ${selectedRoom.day_price || selectedRoom.price}
+            <strong>Day Price:</strong> $
+            {selectedRoom.day_price || selectedRoom.price}
           </p>
 
           <p>
@@ -454,15 +458,13 @@ function MyBookings() {
                 <th>Payment</th>
                 <th>Total Price</th>
                 <th>Price / Person</th>
-                <th>Status</th>
               </tr>
             </thead>
 
             <tbody>
               {bookings.length > 0 ? (
-                bookings.map((booking) => (
-                  <tr key={booking.booking_id}>
-                    <td>{booking.booking_id}</td>
+                bookings.map((booking, index) => (
+                  <tr key={index}>
                     <td>{booking.room_number}</td>
                     <td>{booking.room_type}</td>
                     <td>{booking.floor_name}</td>
@@ -478,16 +480,11 @@ function MyBookings() {
                     </td>
                     <td>${booking.total_price}</td>
                     <td>${booking.price_per_person}</td>
-                    <td>
-                      <span className={`status ${booking.status}`}>
-                        {booking.status}
-                      </span>
-                    </td>
                   </tr>
                 ))
               ) : (
                 <tr>
-                  <td colSpan="12">No bookings found</td>
+                  <td colSpan="10">No bookings found</td>
                 </tr>
               )}
             </tbody>

@@ -80,12 +80,12 @@ function AdminDashboard() {
 
         <div className="admin-summary-box">
           <h3>{availableRooms}</h3>
-          <p>Available Rooms</p>
+          <p>Available Rooms For Today</p>
         </div>
 
         <div className="admin-summary-box">
           <h3>{bookedRooms}</h3>
-          <p>Booked Rooms</p>
+          <p>Booked Rooms For Today</p>
         </div>
       </div>
     </div>
