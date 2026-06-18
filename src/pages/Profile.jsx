@@ -46,7 +46,7 @@ function Profile() {
   const handleSaveProfile = async () => {
     try {
       const response = await axios.put(
-        `https://room-booking-backend-production-7a12.up.railway.app/students/${studentData.student_id}`,
+        `https://room-booking-backend-production-7a12.up.railway.app/profile/${studentData.student_id}`,
         {
           full_name: studentData.full_name,
           username: studentData.username,
@@ -63,7 +63,7 @@ function Profile() {
           imageData.append("profile_image", selectedImage);
 
           const imageResponse = await axios.post(
-            `https://room-booking-backend-production-7a12.up.railway.app/students/${studentData.student_id}/profile-image`,
+            `https://room-booking-backend-production-7a12.up.railway.app/profile/${studentData.student_id}/profile-image`,
             imageData,
             {
               headers: {
@@ -112,7 +112,9 @@ function Profile() {
       <div className="profile-container">
         <div className="profile-card">
           <div
-            className={isEditing ? "profile-avatar clickable-avatar" : "profile-avatar"}
+            className={
+              isEditing ? "profile-avatar clickable-avatar" : "profile-avatar"
+            }
             onClick={handleAvatarClick}
           >
             {imageUrl ? (
